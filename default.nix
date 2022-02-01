@@ -1,3 +1,3 @@
 self: super: {
-  rofi-scripts = super.callPackage ./pkgs/scripts { };
+  rofi-scripts = super.callPackage ./pkgs/rofi-scripts { };
 }
