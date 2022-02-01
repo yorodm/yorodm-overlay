@@ -1,7 +1,7 @@
-{stdenv, bash, writeShellBinScripts, rofi, betterlockscreen}:
+{stdenv, bash, writeShellScriptBin, rofi, betterlockscreen}:
 
 let
-  rofi-power = writeShellBinScripts ''
+  rofi-power = writeShellScriptBin ''
   #!${bash}/bin/bash
   # options to be displayed
   option0="lock"
