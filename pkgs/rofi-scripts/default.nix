@@ -2,7 +2,7 @@
 
 let
   rofi-power = writeShellBinScripts ''
-  #!${pkgs.bash}/bin/bash
+  #!${bash}/bin/bash
   # options to be displayed
   option0="lock"
   option1="logout"
