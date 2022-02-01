@@ -39,7 +39,7 @@ let
 in
 stdenv.mkDerivation rec {
   name = "rofi-scripts";
-  buildInputs [
+  buildInputs = [
     rofi-power
-  ]
+  ];
 }
