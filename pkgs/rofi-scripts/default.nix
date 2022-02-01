@@ -1,7 +1,7 @@
 {stdenv, bash, writeShellScriptBin, rofi, betterlockscreen}:
 
 let
-  rofi-power = writeShellScriptBin ''
+  rofi-power = writeShellScriptBin "rofi-power" ''
   #!${bash}/bin/bash
   # options to be displayed
   option0="lock"
@@ -37,7 +37,7 @@ let
   esac
   '';
 in
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   name = "rofi-scripts";
   buildInputs = [
     rofi-power
