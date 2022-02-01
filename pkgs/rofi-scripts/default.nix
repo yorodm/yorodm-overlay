@@ -37,7 +37,7 @@ let
   esac
   '';
 in
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   name = "rofi-scripts";
   buildInputs = [
     rofi-power
