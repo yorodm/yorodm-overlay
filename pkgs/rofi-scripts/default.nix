@@ -1,4 +1,4 @@
-{stdenv, bash, writeShellScriptBin, rofi, betterlockscreen}:
+{symlinkJoin, bash, writeShellScriptBin, rofi, betterlockscreen}:
 
 let
   rofi-power = writeShellScriptBin "rofi-power" ''
@@ -37,9 +37,9 @@ let
   esac
   '';
 in
-stdenv.mkDerivation rec {
+symlinkJoin  {
   name = "rofi-scripts";
-  buildInputs = [
+  paths = [
     rofi-power
   ];
 }
