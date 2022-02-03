@@ -18,6 +18,7 @@ includes:
 
 ### `st`
 
-tw1zr's fork of `st`.
+(fork of st with some patches)[https://github.com/gnotclub/xst]
+
 
 ## How to use this overlay
