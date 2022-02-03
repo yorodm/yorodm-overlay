@@ -3,7 +3,7 @@ self: super: {
   st = super.st.overrideAttrs (old: {
     # I don't know is this is the right way
     buildInputs = old.buildInputs ++ [ super.cairo ];
-    src = pkgs.fetchFromGitHub {
+    src = super.fetchFromGitHub {
       owner = "yorodm";
       repo = "st";
       rev = "3f97e54e4374ecfad2a5044367b5348896039dc3";
