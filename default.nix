@@ -1,5 +1,14 @@
 self: super: {
   rofi-scripts = super.callPackage ./pkgs/rofi-scripts { };
+  xst = super.st.overrideAttrs (old: {
+    # I don't know is this is the right way
+    src = super.fetchFromGitHub {
+      owner = "gnotclub";
+      repo = "xst";
+      rev = "d4399272c9ba405be63164bfcf4fa13b5b4d71bd";
+      sha256 = "ndBXfW57z4Piy3989nxI1sMoxeoOGCsV6Rpza5SV2RY=";
+    };
+  });
   st = super.st.overrideAttrs (old: {
     # I don't know is this is the right way
     buildInputs = old.buildInputs ++ [ super.cairo ];

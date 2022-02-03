@@ -1,4 +1,4 @@
-# My nixos overlay
+ # My nixos overlay
 A small collection of things I packaged to use with my NixOS
 and `home-manager` configuration
 
@@ -20,5 +20,8 @@ includes:
 
 (fork of st with some patches)[https://github.com/gnotclub/xst]
 
+### `xst`
+
+(fork of st with some awesome patches)[https://github.com/gnotclub/xst]
 
 ## How to use this overlay
