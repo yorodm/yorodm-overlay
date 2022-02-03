@@ -6,7 +6,7 @@ List of packages:
 
 * `rofi-scripts`
 
-## Packages description and help
+## Packages description
 
 ### `rofi-scripts`
 
@@ -16,8 +16,8 @@ includes:
 * `rofi-power`, shows a menu for *logout*,*lock*,*suspend*,*reboot*
 * `rofi-shot`, shows a menu for taking screenshots
 
-Example usage with `home-manager`:
+### `st`
 
-```
-TODO
-```
+tw1zr's fork of `st`.
+
+## How to use this overlay
