@@ -36,6 +36,7 @@ let
         systemctl poweroff;;
   esac
   '';
+
 in
 symlinkJoin  {
   name = "rofi-scripts";
