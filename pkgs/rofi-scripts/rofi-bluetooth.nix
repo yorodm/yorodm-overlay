@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchFromGitHub, bluez}:
+{ lib, stdenv, fetchFromGitHub, bluez }:
 
 stdenv.mkDerivation rec {
   pname = "rofi-bluetooth";
@@ -10,8 +10,7 @@ stdenv.mkDerivation rec {
     rev = "893db1f2b549e7bc0e9c62e7670314349a29cdf2";
     sha256 = "1jrjiv352awv838v3b6gjjc5rn3kjaagijgn5nky82hhl4j4x16y";
     fetchSubmodules = true;
-  }
-
+  };
 
   nativeBuildInputs = [ makeWrapper ];
 
@@ -22,9 +21,7 @@ stdenv.mkDerivation rec {
     cp -a rofi-bluetooth $out/bin/rofi-bluetooth
   '';
 
-  wrapperPath = with lib; makeBinPath [
-    bluez
-  ];
+  wrapperPath = with lib; makeBinPath [ bluez ];
 
   fixupPhase = ''
     patchShebangs $out/bin
