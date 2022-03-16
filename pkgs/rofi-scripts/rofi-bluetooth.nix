@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchFromGitHub, bluez }:
+{ lib, stdenv, fetchFromGitHub, bluez, makeWrapper }:
 
 stdenv.mkDerivation rec {
   pname = "rofi-bluetooth";
