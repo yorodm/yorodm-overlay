@@ -9,7 +9,7 @@ let
     enumerate () {
       ${awk} -F"|"  '{ for (i = 1; i <= NF; ++i) print "<big>"$i"</big><sub><small>"i"</small></sub>"; exit } '
     }
-    question=$(printf "||||"| enumerate|rofi -dmenu -markup-rows "${theme}")
+    question=$(printf "||||"| enumerate|rofi -dmenu -markup-rows -theme-str "${theme}")
 
     case $question in
       **)
