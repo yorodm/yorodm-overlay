@@ -1,6 +1,7 @@
-{symlinkJoin, bash, writeShellScriptBin, rofi, betterlockscreen}:
+{symlinkJoin, gawk, bash, writeShellScriptBin, rofi, betterlockscreen}:
 
 let
+  awk = "${gawk}/bin/awk";
   rofi-power = writeShellScriptBin "rofi-power" ''
   #!${bash}/bin/bash
   enumerate () {
@@ -10,13 +11,12 @@ let
 
   case $question in
     **)
-        light-locker-command -l
+        ${betterlockscreen}/bin/betterlockscreen --lock;;
         ;;
     **)
         systemctl suspend
         ;;
     **)
-        # bspc quit || qtile cmd-obj -o cmd -f shutdown
         loginctl terminate-session $XDG_SESSION_ID
         ;;
     **)
