@@ -11,7 +11,7 @@ let
 
   case $question in
     **)
-        ${betterlockscreen}/bin/betterlockscreen --lock;;
+        ${betterlockscreen}/bin/betterlockscreen --lock
         ;;
     **)
         systemctl suspend
