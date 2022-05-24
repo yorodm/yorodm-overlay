@@ -1,18 +1,17 @@
-{ lib, buildGoPackage, fetchFromGitHub }:
+{ lib, buildGoModule, fetchFromGitHub }:
 
-buildGoPackage rec {
+buildGoModule rec {
   pname = "wgcf";
   version = "2.2.13";
 
   src = fetchFromGitHub {
-    owner = "ViRb3";
-    repo = "wgcf";
-    rev = "v${version}";
-    sha256 = "14ssj5migsd3i2j290rxc2xrg51sxb5fjj61lcn79xbi9wzy22jz";
+    owner = "yorodm";
+    repo = pname;
+    rev =  "05e37fe11979356e2513e91093fc463b7e1fe42c";
+    sha256 = "0s7qxxyb8295zj4lmszw3illyfzfr58gv5zrjgvx6zbkrjqkbmjv";
   };
 
-  goPackagePath = "github.com/ViRb3/wgcf";
-
+  vendorSha256 = null;
   subPackages = [ "." ];
 
   meta = with lib; {
