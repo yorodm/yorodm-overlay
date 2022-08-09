@@ -11,8 +11,9 @@ buildGoModule rec {
     sha256 = "0s7qxxyb8295zj4lmszw3illyfzfr58gv5zrjgvx6zbkrjqkbmjv";
   };
 
-  vendorSha256 = null;
-  subPackages = [ "." ];
+  vendorSha256 = "1q405jy2ijc09k49j0ays00iwzmxib2x5j68z27b89945k5b9r7x";
+#  runVend = true;
+  proxyVendor = true;
 
   meta = with lib; {
     description = "Cross-platform, unofficial CLI for Cloudflare Warp";

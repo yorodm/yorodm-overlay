@@ -11,6 +11,7 @@ self: super: {
       sha256 = "ndBXfW57z4Piy3989nxI1sMoxeoOGCsV6Rpza5SV2RY=";
     };
   });
+  input-leap = super.libsForQt5.callPackage ./pkgs/input-leap.nix {};
   st = super.st.overrideAttrs (old: {
     # I don't know is this is the right way
     buildInputs = old.buildInputs ++ [ super.cairo ];
