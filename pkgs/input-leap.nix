@@ -10,10 +10,9 @@ mkDerivation rec {
 
   src = fetchFromGitHub {
     owner = "input-leap";
-    repo = pname;
-    rev = "1b5aae98e73c840c4108cb1de3d09e3ad620383a";
-    sha256 = "Scz+P+opiSOlIYsvLcujNEVuLWO/x+HrCvKlAMqOsTw=";
-    fetchSubmodules = true;
+    repo = "input-leap";
+    rev = "204238467296e9a9a65e86a1cac74ebfd3d45595";
+    sha256 = "/MT0CVN0VwVKxYSsuDnNs5VEIjz5jURmek7Nf4Cq/JQ=";
   };
 
   buildInputs = [ curl xorg.libX11 xorg.libXext xorg.libXtst avahiWithLibdnssdCompat qtbase xorg.libXrandr xorg.libXinerama xorg.libICE xorg.libSM xorg.libXdmcp];
