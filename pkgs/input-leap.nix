@@ -12,7 +12,8 @@ mkDerivation rec {
     owner = "input-leap";
     repo = "input-leap";
     rev = "204238467296e9a9a65e86a1cac74ebfd3d45595";
-    sha256 = "/MT0CVN0VwVKxYSsuDnNs5VEIjz5jURmek7Nf4Cq/JQ=";
+    sha256 = "kY+dhBWT7tWD551e4HzIGx5Fj0Z7C8xShG0LB/rN+10=";
+    fetchSubmodules = true;
   };
 
   buildInputs = [ curl xorg.libX11 xorg.libXext xorg.libXtst avahiWithLibdnssdCompat qtbase xorg.libXrandr xorg.libXinerama xorg.libICE xorg.libSM xorg.libXdmcp];
