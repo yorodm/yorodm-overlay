@@ -12,6 +12,7 @@ self: super: {
     };
   });
   input-leap = super.libsForQt5.callPackage ./pkgs/input-leap.nix {};
+  proton-ge = super.callPackage ./pkgs/proton-ge.nix
   st = super.st.overrideAttrs (old: {
     # I don't know is this is the right way
     buildInputs = old.buildInputs ++ [ super.cairo ];
