@@ -1,7 +1,6 @@
 self: super: {
   rofi-power = super.callPackage ./pkgs/rofi-scripts/rofi-power.nix { };
   rofi-bluetooth = super.callPackage ./pkgs/rofi-scripts/rofi-bluetooth.nix { };
-  wgcf = super.callPackage ./pkgs/wgcf.nix {};
   xst = super.st.overrideAttrs (old: {
     # I don't know is this is the right way
     src = super.fetchFromGitHub {
