@@ -6,5 +6,6 @@ in pkgs.mkShell {
     nix-prefetch
     nix-prefetch-git
     nix-prefetch-github
+    nil
   ];
 }
